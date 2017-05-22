@@ -335,14 +335,6 @@ var user1 = {
 
 //Your Code Here
 
-var user1 =
-{
-    name: 'Tyler McGinnis',
-    email: 'tylermcginnis33@gmail.com',
-    password: 'iLoveJavaScript',
-    username: 'infiniateLoop'
-};
-
 var user2 =
 {
     name: 'Jacob Leatherwood',
@@ -361,11 +353,14 @@ var user3 =
 
 var users = [user1, user2, user3];
 
-for (var i = 0; i < users.length;i++) {
-  if (users[i] === "tylermcginnis33@gmail.com") {
-    users.splice(i,1);
+function gitRid(users){
+  for (var user of users) {
+    if (user.email === "tylermcginnis33@gmail.com") {
+      users.splice(users.indexOf(user),1);
+    }
   }
 }
+gitRid(users);
 
 /*Now you have a very common data structure. Twitter is a good use case.
 It's easy to imagine that your followers list on Twitter is an Array full or objects
