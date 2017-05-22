@@ -240,9 +240,13 @@ function longer (arr1,arr2) {
 
   //Code Here
 function both (arr1, arr2) {
-  for (var i = 0; i < arr1.length; i++){
-    
+  arr3 = [];
+  for (var i = 0; i < arr1.length; i++) {
+    if (arr2.indexOf(arr1[i]) > -1){
+      arr3.push(arr1[i]);
+    }
   }
+  return arr3;
 }
 
 
@@ -288,7 +292,21 @@ sure that it's equal to 4. */
 Loop through your devMountainEmployees until you find cahlan, then remove him from the array.*/
 
   //Code Here
+devMountainEmployees.push(tyler);
+devMountainEmployees.push(cahlan);
+devMountainEmployees.push(ryan);
+devMountainEmployees.push(colt);
+console.log(devMountainEmployees.length);
 
+function breakdown (devMountainEmployees) {
+  for (var i = 0; i < devMountainEmployees.length; i++) {
+    if(devMountainEmployees[i] === cahlan) {
+      devMountainEmployees.splice(i,1);
+    }
+  }
+  return devMountainEmployees;
+}
+breakdown(devMountainEmployees);
 
 
 
@@ -301,6 +319,8 @@ of Data is to have an Array full of objects. */
 //Create an empty array called users.
 
   //Code Here
+var users = [];
+
 
 /*Now add three user objects to your users array. Each user object should contain the
 following properties. name, email, password, username.*/
@@ -314,6 +334,38 @@ var user1 = {
 };
 
 //Your Code Here
+
+var user1 =
+{
+    name: 'Tyler McGinnis',
+    email: 'tylermcginnis33@gmail.com',
+    password: 'iLoveJavaScript',
+    username: 'infiniateLoop'
+};
+
+var user2 =
+{
+    name: 'Jacob Leatherwood',
+    email: 'jacob@gmail.com',
+    password: 'iLoveJavaScriptSoMuch',
+    username: 'infiniateLoop'
+};
+
+var user3 =
+{
+  name: 'Pyler McGinnis',
+  email: 'pylermcginnis33@gmail.com',
+  password: 'iLoveJavaScript',
+  username: 'infiniateLoop'
+};
+
+var users = [user1, user2, user3];
+
+for (var i = 0; i < users.length;i++) {
+  if (users[i] === "tylermcginnis33@gmail.com") {
+    users.splice(i,1);
+  }
+}
 
 /*Now you have a very common data structure. Twitter is a good use case.
 It's easy to imagine that your followers list on Twitter is an Array full or objects
